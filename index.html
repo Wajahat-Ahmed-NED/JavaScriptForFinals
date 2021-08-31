@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            font-size: 3em;
+            word-spacing: 2px;
+            color:red;
+        }
+    </style>
+    <!-- JS form validation via api -->
+</head>
+<body>
+    <h2>Hy this is wajahat</h2>
+    <input type="number" min="10" max="30" name="num" id="num">
+    <button onclick="myfunc()">Submit</button>
+    <p id="demo"></p>
+
+    <script>
+        function myfunc(){
+            var inpObj=document.getElementById('num')
+            if (!inpObj.checkValidity()){
+                document.getElementById('demo').innerHTML=inpObj.validationMessage
+                console.log('wrong')
+            }
+            else{
+                document.body.innerHTML="input is ok"
+                console.log('sahi ha')
+            }
+        }
+    </script>
+</body>
+</html>

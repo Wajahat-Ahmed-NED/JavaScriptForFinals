@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" min="10" id="inp1" required><br>
+    <input type="number" max="200" id="inp2" required>
+    <button onclick="formValidate()">Submit</button>
+
+
+    <script>
+        // function formValidate(){
+        //     var x=document.getElementById('inp1')
+        //     var y=document.getElementById('inp2')
+ 
+        //     if(x.value=="" ){
+        //         alert('1st Input is required')
+        //     }
+        //     else{
+        //         if(x.value<10){
+        //             alert('1st input should not be less than 10')
+        //         }
+        //         else{
+        //             alert("1st input is correct")
+        //         }
+        //     }
+        //     if(y.value==""){
+        //         alert('2nd Input is required')
+        //     }
+        //     else{
+        //         if(y.value>200){
+        //             alert("2nd input should not be greater than 200")
+        //         }
+        //         else{
+        //             alert("2nd input is correct")
+        //         }
+        //     }
+            
+        // }
+
+        function formValidate(){
+            var x=document.getElementById('inp1')
+            var y=document.getElementById('inp2')
+            if(!x.checkValidity()){
+                alert(x.validationMessage)
+            }
+            else{
+                alert('1st correct input')
+            }
+            if(!y.checkValidity()){
+                alert(y.validationMessage)
+            }
+            else{
+                alert("2nd is correct")
+            }
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="demo" width="200%" onmouseover="hider()" onmouseout="shower()" style="border: 2px solid green;">
+        There is some text
+        <button id="btn" onclick="hider()" >Submit</button>
+    </div>
+    
+
+    <script>
+        function hider(){
+            var x=document.getElementById('btn');
+            
+                x.style.display='none';
+
+            
+
+        }
+    
+        function shower(){
+            var x=document.getElementById('btn');
+           
+            x.style.display='block';
+            
+
+            }
+
+        
+    </script>
+</body>
+</html>
